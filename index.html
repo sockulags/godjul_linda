@@ -22,7 +22,7 @@
             z-index: 1;
             transform-style: preserve-3d;
             animation: float 6s ease-in-out infinite;
-            height: 100dvh;
+            height: 70dvh;
             width: 100dvw;
         }
 
@@ -32,7 +32,7 @@
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 5em;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             background: linear-gradient(45deg, #ff0000, #00ff00, #ff0000);
@@ -50,7 +50,7 @@
 
         button {
             padding: 15px 30px;
-            font-size: 1.2em;
+            font-size: 2.8em;
             background: #c41e3a;
             color: white;
             border: none;
@@ -74,7 +74,7 @@
             opacity: 0;
             transition: all 0.8s;
             transform: scale(0.5);
-            padding: 20px;
+            padding: 30px;
         }
 
         #extra-message.visible {
@@ -84,9 +84,9 @@
 
         .christmas-tree {
             position: relative;
-            width: 200px;
-            height: 300px;
-            margin: 20px auto;
+            width: 400px;
+            height: 600px;
+            margin: 40px auto;
             opacity: 0;
             transition: opacity 1s;
         }
@@ -99,38 +99,38 @@
             position: absolute;
             width: 0;
             height: 0;
-            border-left: 100px solid transparent;
-            border-right: 100px solid transparent;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
             left: 50%;
             transform: translateX(-50%);
         }
 
         .tree-part:nth-child(1) {
-            border-bottom: 100px solid #2d5a3f;
-            bottom: 200px;
+            border-bottom: 200px solid #2d5a3f;
+            bottom: 400px;
         }
 
         .tree-part:nth-child(2) {
-            border-bottom: 120px solid #1a472a;
-            bottom: 100px;
-            border-left: 120px solid transparent;
-            border-right: 120px solid transparent;
+            border-bottom: 240px solid #1a472a;
+            bottom: 200px;
+            border-left: 240px solid transparent;
+            border-right: 240px solid transparent;
         }
 
         .tree-part:nth-child(3) {
-            border-bottom: 140px solid #153d25;
+            border-bottom: 280px solid #153d25;
             bottom: 0;
-            border-left: 140px solid transparent;
-            border-right: 140px solid transparent;
+            border-left: 280px solid transparent;
+            border-right: 280px solid transparent;
         }
 
         .present-box {
             position: absolute;
-            bottom: -50px;
+            bottom: -150px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             background: #8b4513;
             cursor: pointer;
             transition: all 0.5s;
@@ -157,8 +157,8 @@
 
         .small-gift {
             position: absolute;
-            width: 30px;
-            height: 30px;
+            width: 60px;
+            height: 60px;
             background: #ff0000;
             top: 50%;
             left: 50%;
@@ -175,7 +175,7 @@
             content: '';
             position: absolute;
             width: 100%;
-            height: 6px;
+            height: 12px;
             background: rgb(255, 196, 0);
             top: 50%;
             left:0;
@@ -186,7 +186,7 @@
             content: '';
             position: absolute;
             height: 100%;
-            width: 6px;
+            width: 12px;
             background: rgb(255, 196, 0);
             left: 50%;
             transform: translateX(-50%);
@@ -194,11 +194,11 @@
 
         .star {
             position: absolute;
-            top: -20px;
+            top: 70px;
             left: 50%;
             transform: translateX(-50%);
             color: #ffd700;
-            font-size: 40px;
+            font-size: 80px;
             animation: starTwinkle 1s infinite alternate;
         }
 
@@ -209,8 +209,8 @@
 
         .ornament {
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: radial-gradient(circle at 30% 30%, #fff, #ffeb3b);
             animation: twinkle 1.5s infinite alternate;
@@ -242,7 +242,7 @@
             <div class="tree-part"></div>
             <div class="tree-part"></div>
             <div class="present-box">
-                <div class="clue">Ledtråd </div>
+                <div class="clue" style="font-size: 3rem;">Ledtråd </div>
                 <div class="newspaper"></div>
                 <div class="small-gift"></div>
             </div>
@@ -306,8 +306,8 @@
             for (let i = 0; i < 15; i++) {
                 const ornament = document.createElement('div');
                 ornament.className = 'ornament';
-                ornament.style.left = Math.random() * 180 + 10 + 'px';
-                ornament.style.top = Math.random() * 280 + 'px';
+                ornament.style.left = Math.random() * 360 + 30 + 'px';
+                ornament.style.top = Math.random() * 460 + 120 + 'px';
                 ornament.style.backgroundColor = `hsl(${Math.random() * 360}, 80%, 50%)`;
                 tree.appendChild(ornament);
             }
